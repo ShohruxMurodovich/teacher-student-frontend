@@ -1,0 +1,208 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  display: flex;
+}
+
+.main{
+  width: 80%;
+  padding: 30px;
+  background-color: rgb(217, 224, 229);
+}
+
+.head{
+  display: flex;
+  align-items: center;
+}
+
+.head_title{
+  margin-left: 90px;
+  font-size: 30px;
+  margin-right: 500px;
+}
+
+.add {
+  background-color: #363740;
+  border: 1px solid #363740;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.add:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .add {
+    padding: 10px 30px;
+  }
+}
+
+
+.list{
+  margin: 0;
+  padding: 0;
+}
+
+.list__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgb(180, 180, 180);
+  border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+.list__item--active{
+  background-color: rgb(147, 147, 147);
+}
+
+.list__title{
+  min-width: 30px;
+  text-align: center;
+}
+
+.list__name{
+  min-width: 130px;
+  text-align: center;
+}
+
+.list__phone{
+  min-width: 180px;
+  text-align: center;
+}
+
+
+
+
+.modal{
+  width: 220vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  z-index: 1;
+}
+
+.modal.active{
+  transform: scale(1);
+}
+
+.modal__content{
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 400px;
+}
+
+.modal__form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal__input{
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  width: 250px;
+}
+
+.textarea{
+  resize: none;
+}
+
+.select{
+  font-size: 17px;
+  width: 280px;
+}
+
+.modal__btn{
+  width: 100px;
+  padding: 10px 15px;
+}
+
+
+.modal__btn {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #2f80ed;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.modal__btn:hover {
+  background-color: #1366d6;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.modal__btn:hover:after {
+  opacity: .5;
+}
+
+.modal__btn:active {
+  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.modal__btn:active:after {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .modal__btn {
+    padding: 8px 13px;
+    width: 176px;
+  }
+}
